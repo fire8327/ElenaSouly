@@ -4,12 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/style/output.css">
+    <title>Главная</title>
+    <link rel="stylesheet" href="assets/css/output.css">
 </head>
-<body class="grid-container h-screen ">
-    <div class="bg-slate-700 col-[full]">
-
-    </div>
+<body class="flex flex-col min-h-screen bg-[#09182C] text-white">
+    <header class="py-5 md:py-6 xl:py-8 w-full border-b-[0.5px] border-[#F8B6D480] grid-container relative">
+        <div class="flex items-center justify-between gap-20">
+            <a href="index.html" class="text-[20px] md:text-[24px] xl:text-[28px] Novelist">Академия альтернативного образования "ЭВОЛЮЦИЯ"</a>
+            <div class="flex items-center gap-9 text-xl leading-[161.52%] font-extralight">
+                <a href="">Главная</a>
+                <a href="">Курсы</a>
+                <a href="">Специалисты</a>
+                <a href="">Модули</a>
+            </div>
+        </div>
+        <img src="assets/images/header/bg.svg" alt="" class="absolute w-full h-full inset-0 col-span-full object-cover -z-[1]">
+    </header>
+    <main class="grid-container gap-12 md:gap-16 xl:gap-y-[105px]">
+        <div class="col-span-full grid-container w-full relative">
+            <div class="flex items-center max-lg:flex-col gap-6 xl:gap-8 mt-10">
+                <div class="flex flex-col gap-6 md:gap-8 xl:gap-10 grow">
+                    <p class="text-4xl md:text-5xl xl:text-[64px] Novelist leading-[129.5%] uppercase">Курсы по Квантовой эволюции</p>
+                    <div class="flex flex-col gap-4 xl:gap-5">
+                        <p class="text-lg md:text-xl xl:text-2xl leading-[167%] font-extralight">Освой наш курс и получи диплом государственного образца:"Психологическое консультирование с альтернативными методами"</p>
+                        <div class="flex items-sstart gap-5">
+                            <img src="assets/images/firstScreen/eye.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <img src="assets/images/firstScreen/space.png" alt="" class="w-full lg:w-[45%]">
+            </div>
+        </div>
+    </main>
 </body>
 </html>

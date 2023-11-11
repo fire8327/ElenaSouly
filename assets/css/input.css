@@ -1,0 +1,66 @@
+@import url('https://fonts.cdnfonts.com/css/novelist');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root{
+        /* макимальная ширина контента */
+        --widthContent:1200px;
+        /* Растояние от границы брузера по бокам */
+        --widthContentMargin:16px;
+    }
+
+    /* Настройка кастомных контейнеров */
+    /* Применение системы гридов для расположения контента в ячейку main или full или в любую другую ячейку между именованными линиями grid*/
+
+    .grid-container{        
+        grid-template-columns: [full-start] minmax(var(--widthContentMargin), 1fr) [main-start] minmax(0, var(--widthContent)) [main-end] minmax(var(--widthContentMargin), 1fr) [full-end];
+        @apply grid
+    }
+
+    .grid-container>*{        
+        @apply col-[main]
+    }    
+
+    .wrapper{ 
+        @apply mx-auto w-[calc(100%-var(--widthContentMargin)*2)] max-w-[var(--widthContent)]
+    }
+
+    .container{        
+        @apply max-w-[var(--widthContent)]
+    }
+}
+
+body {
+    font-family: "NeverMind";
+}
+
+@font-face {
+    font-family: 'NeverMind';
+    src: url('../fonts/NeverMindCompact-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'NeverMind';
+    src: url('../fonts/NeverMindCompact-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'NeverMind';
+    src: url('../fonts/NeverMindCompact-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'NeverMind';
+    src: url('../fonts/NeverMindCompact-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+}
+
+.Novelist {
+    font-family: "Novelist", "serif";
+}
