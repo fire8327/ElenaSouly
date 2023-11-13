@@ -11,16 +11,22 @@
     <header class="py-5 md:py-6 xl:py-8 w-full border-b-[0.5px] border-[#F8B6D480] grid-container relative">
         <div class="flex items-center justify-between gap-20">
             <a href="index.html" class="text-[20px] md:text-[24px] xl:text-[28px] Novelist">Академия альтернативного образования "ЭВОЛЮЦИЯ"</a>
-            <div class="flex items-center gap-9 text-xl leading-[161.52%] font-extralight">
-                <a href="">Главная</a>
+            <nav class="flex lg:items-center gap-9 text-xl leading-[161.52%] font-extralight max-lg:absolute max-lg:w-full max-lg:top-0 max-lg:left-0 max-lg:flex-col max-lg:rounded-b-lg max-lg:bg-[#09182C] max-lg:-translate-y-full max-lg:transition-all max-lg:duration-500 max-lg:z-40 max-lg:p-5" id="menu">
+                <a href="index.html">Главная</a>
                 <a href="">Курсы</a>
                 <a href="">Специалисты</a>
                 <a href="">Модули</a>
-            </div>
+            </nav>
+            <button class="lg:hidden flex flex-col z-30 justify-between w-[26px] transition-all ease-linear h-3.5 shrink-0" id="toggler">
+                <span class="w-full h-0.5 bg-white rounded-[1px] origin-[0] transition-transform ease-linear duration-200"></span>
+                <span class="w-full h-0.5 bg-white rounded-[1px] transition-opacity ease-linear duration-200"></span>
+                <span class="w-full h-0.5 bg-white rounded-[1px] origin-[0] transition-transform ease-linear duration-200"></span>
+            </button>
         </div>
         <img src="assets/images/header/bg.svg" alt="" class="absolute w-full h-full inset-0 col-span-full object-cover -z-[1]">
+        <div class="absolute w-full h-screen top-full bg-black/50 col-span-full z-30 hidden lg:hidden" id="overlay"></div>
     </header>
-    <main class="grid-container gap-12 md:gap-16 xl:gap-y-[105px]">
+    <main class="grid-container gap-y-12 md:gap-y-16 xl:gap-y-[105px]">
         <div class="col-span-full grid-container w-full relative">
             <div class="flex items-center max-lg:flex-col gap-6 xl:gap-8 mt-10">
                 <div class="flex flex-col gap-6 md:gap-8 xl:gap-10 grow">
@@ -45,9 +51,9 @@
         </div>
         <div class="flex flex-col gap-6 md:gap-8 xl:gap-10 items-center">
             <div class="flex items-center gap-4 md:gap-6 xl:gap-10">
-                <img src="assets/images/forWhom/ball.svg" alt="">
+                <img src="assets/images/forWhom/ball.svg" alt="" class="max-lg:w-16">
                 <p class="uppercase leading-[129.5%] Novelist text-3xl md:text-4xl xl:text-5xl font-normal">Кому подойдет этот курс?</p>
-                <img src="assets/images/forWhom/moon.svg" alt="">
+                <img src="assets/images/forWhom/moon.svg" alt="" class="max-lg:w-16">
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 xl:gap-5 text-xl md:text-2xl xl:text-[32px] leading-[129.5%] font-extralight text-center">
                 <div class="flex flex-col gap-6 md:gap-8 xl:gap-10">
@@ -66,9 +72,9 @@
         </div>
         <div class="flex flex-col gap-6 md:gap-10 xl:gap-[75px] items-center">
             <div class="flex items-center gap-4 md:gap-6 xl:gap-10">
-                <img src="assets/images/courses/hand.svg" alt="">
+                <img src="assets/images/courses/hand.svg" alt="" class="max-lg:w-16">
                 <p class="uppercase leading-[129.5%] Novelist text-3xl md:text-4xl xl:text-5xl font-normal">Курсы</p>
-                <img src="assets/images/courses/hand.svg" alt="" class="scale-x-[-1]">
+                <img src="assets/images/courses/hand.svg" alt="" class="scale-x-[-1] max-lg:w-16">
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 xl:gap-5 text-normal text-sm lg:text-base">
                 <div class="flex flex-col gap-5 items-center h-full">
@@ -250,6 +256,168 @@
                 </div>
             </div>
         </div>
+        <div class="flex flex-col gap-6 md:gap-8 xl:gap-14 items-center">
+            <div class="flex items-center gap-4 md:gap-6 xl:gap-10">
+                <img src="assets/images/modules/sun.svg" alt="" class="max-lg:w-16">
+                <p class="uppercase leading-[129.5%] Novelist text-3xl md:text-4xl xl:text-5xl font-normal">Модули</p>
+                <img src="assets/images/modules/moon.svg" alt="" class="max-lg:w-16">
+            </div>
+            <div class="flex flex-col gap-4 xl:gap-5 w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 xl:gap-5 w-full">
+                    <div class="border border-[#C49362] rounded-[25px] p-2 relative overflow-hidden">                        
+                        <div class="border border-[#C49362] rounded-[20px] w-full h-full">
+                            <div class="flex flex-col gap-2.5 py-9">
+                                <div class="flex items-start gap-4">
+                                    <img src="assets/images/modules/hand.svg" alt="">
+                                    <p class="uppercase text-xl md:text-2xl xl:text-[28px] leading-[129.5%] Novelist">МодулЬ 1 - <br> вВОДНЫЙ</p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="flex items-center mt-2.5">
+                                        <span class="w-14 h-px bg-[#C49362]"></span>
+                                        <span class="w-1 h-1 rounded-full bg-[#C49362]"></span>
+                                    </div>
+                                    <p class="leading-[132.02%]">Биоэнергетическая подготовка</p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="flex items-center mt-2.5">
+                                        <span class="w-14 h-px bg-[#C49362]"></span>
+                                        <span class="w-1 h-1 rounded-full bg-[#C49362]"></span>
+                                    </div>
+                                    <p class="leading-[132.02%]">Наработка и расширение канала. Работа с полем</p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="flex items-center mt-2.5">
+                                        <span class="w-14 h-px bg-[#C49362]"></span>
+                                        <span class="w-1 h-1 rounded-full bg-[#C49362]"></span>
+                                    </div>
+                                    <p class="leading-[132.02%]">Считывание информации пространственно-временных континуумов</p>
+                                </div>                        
+                            </div>                            
+                        </div>
+                        <img src="assets/images/modules/bg.svg" alt="" class="absolute -z-[1] top-7 right-7">
+                    </div>
+                    <div class="border border-[#C49362] rounded-[25px] p-2 relative overflow-hidden">
+                        <div class="border border-[#C49362] rounded-[20px] w-full h-full">                            
+                            <div class="flex flex-col gap-2.5 py-9">
+                                <div class="flex items-start gap-4">
+                                    <img src="assets/images/modules/hand.svg" alt="">
+                                    <p class="uppercase text-xl md:text-2xl xl:text-[28px] leading-[129.5%] Novelist">Модуль 2 - <br> основной</p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="flex items-center mt-2.5">
+                                        <span class="w-14 h-px bg-[#C49362]"></span>
+                                        <span class="w-1 h-1 rounded-full bg-[#C49362]"></span>
+                                    </div>
+                                    <p class="leading-[132.02%]">Метод Квантовой эволюции: Индивидуальная работа с клиентом</p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="flex items-center mt-2.5">
+                                        <span class="w-14 h-px bg-[#C49362]"></span>
+                                        <span class="w-1 h-1 rounded-full bg-[#C49362]"></span>
+                                    </div>
+                                    <p class="leading-[132.02%]">Эриксоновский гипноз</p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="flex items-center mt-2.5">
+                                        <span class="w-14 h-px bg-[#C49362]"></span>
+                                        <span class="w-1 h-1 rounded-full bg-[#C49362]"></span>
+                                    </div>
+                                    <p class="leading-[132.02%]">Регрессионная терапия</p>
+                                </div>                        
+                            </div>
+                        </div>
+                        <img src="assets/images/modules/bg.svg" alt="" class="absolute -z-[1] top-7 right-7">
+                    </div> 
+                    <div class="border border-[#C49362] rounded-[25px] p-2 relative overflow-hidden">
+                        <div class="border border-[#C49362] rounded-[20px] w-full h-full">                            
+                            <div class="flex flex-col gap-2.5 py-9">
+                                <div class="flex items-start gap-4">
+                                    <img src="assets/images/modules/hand.svg" alt="">
+                                    <p class="uppercase text-xl md:text-2xl xl:text-[28px] leading-[129.5%] Novelist">Модуль 3 - <br> продвинутый</p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="flex items-center mt-2.5">
+                                        <span class="w-14 h-px bg-[#C49362]"></span>
+                                        <span class="w-1 h-1 rounded-full bg-[#C49362]"></span>
+                                    </div>
+                                    <p class="leading-[132.02%]">ПСИХОКИНЕТИКА (магия)</p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="flex items-center mt-2.5">
+                                        <span class="w-14 h-px bg-[#C49362]"></span>
+                                        <span class="w-1 h-1 rounded-full bg-[#C49362]"></span>
+                                    </div>
+                                    <p class="leading-[132.02%]">Альтернативные методы психологического консультирования</p>
+                                </div>                        
+                            </div>
+                        </div>
+                        <img src="assets/images/modules/bg.svg" alt="" class="absolute -z-[1] top-7 right-7">
+                    </div> 
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 xl:gap-5 w-full lg:mx-auto lg:w-4/5">
+                    <div class="border border-[#C49362] rounded-[25px] p-2 relative overflow-hidden">
+                        <div class="border border-[#C49362] rounded-[20px] w-full h-full">                            
+                            <div class="flex flex-col gap-2.5 py-9">
+                                <div class="flex items-start gap-4">
+                                    <img src="assets/images/modules/hand.svg" alt="">
+                                    <p class="uppercase text-xl md:text-2xl xl:text-[28px] leading-[129.5%] Novelist">Модуль - Создание <br> дохода под ключ</p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="flex items-center mt-2.5">
+                                        <span class="w-14 h-px bg-[#C49362]"></span>
+                                        <span class="w-1 h-1 rounded-full bg-[#C49362]"></span>
+                                    </div>
+                                    <p class="leading-[132.02%]">Авторская программа Александра Янеса "Создание фундамента личности через стратегические сессии познания себя"</p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="flex items-center mt-2.5">
+                                        <span class="w-14 h-px bg-[#C49362]"></span>
+                                        <span class="w-1 h-1 rounded-full bg-[#C49362]"></span>
+                                    </div>
+                                    <p class="leading-[132.02%]">Упаковка себя, как готового бизнес проекта, с учётом особенностей личности</p>
+                                </div>                        
+                            </div>
+                        </div>
+                        <img src="assets/images/modules/bg.svg" alt="" class="absolute -z-[1] top-7 right-7">
+                    </div> 
+                    <div class="border border-[#C49362] rounded-[25px] p-2 relative overflow-hidden">
+                        <div class="border border-[#C49362] rounded-[20px] w-full h-full">                            
+                            <div class="flex flex-col gap-2.5 py-9">
+                                <div class="flex items-start gap-4">
+                                    <img src="assets/images/modules/hand.svg" alt="">
+                                    <p class="uppercase text-xl md:text-2xl xl:text-[28px] leading-[129.5%] Novelist">Бонусы</p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="flex items-center mt-2.5">
+                                        <span class="w-14 h-px bg-[#C49362]"></span>
+                                        <span class="w-1 h-1 rounded-full bg-[#C49362]"></span>
+                                    </div>
+                                    <p class="leading-[132.02%]">Курс "Биохакинг и нейрохакинг в психологическом консультировании"</p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="flex items-center mt-2.5">
+                                        <span class="w-14 h-px bg-[#C49362]"></span>
+                                        <span class="w-1 h-1 rounded-full bg-[#C49362]"></span>
+                                    </div>
+                                    <p class="leading-[132.02%]">Длительность обучения - 1,5 месяца </p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="flex items-center mt-2.5">
+                                        <span class="w-14 h-px bg-[#C49362]"></span>
+                                        <span class="w-1 h-1 rounded-full bg-[#C49362]"></span>
+                                    </div>
+                                    <p class="leading-[132.02%]">Выдается сертификат</p>
+                                </div>                        
+                            </div>
+                        </div>
+                        <img src="assets/images/modules/bg.svg" alt="" class="absolute -z-[1] top-7 right-7">
+                    </div> 
+                </div>
+            </div>
+        </div>
     </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
