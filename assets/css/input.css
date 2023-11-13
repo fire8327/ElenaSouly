@@ -64,3 +64,6 @@ body {
 .Novelist {
     font-family: "Novelist", "serif";
 }
+.swiper-button-lock {
+    @apply !block
+}

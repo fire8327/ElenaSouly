@@ -9,4 +9,25 @@ $("#toggler").click(()=>{
     $("#toggler > :nth-child(3)").toggleClass("-rotate-45")
     $("body").toggleClass("overflow-hidden")
     $("#overlay").toggleClass("hidden")
-  })
+})
+
+/* slider */
+const swiper = new Swiper('.reviwsSlider', {
+    spaceBetween: 20,
+    breakpoints: {
+        320: {
+          slidesPerView: 1
+        },
+        768: {
+          slidesPerView: 2
+        },
+        1024: {
+          slidesPerView: 3
+        }
+    },
+    loop: true,  
+    navigation: {
+      nextEl: '.reviewsNext',
+      prevEl: '.reviewsPrev',
+    },
+  });

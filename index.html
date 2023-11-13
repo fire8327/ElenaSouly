@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
     <link rel="stylesheet" href="assets/css/output.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body class="flex flex-col min-h-screen bg-[#09182C] text-white">
     <header class="py-5 md:py-6 xl:py-8 w-full border-b-[0.5px] border-[#F8B6D480] grid-container relative">
@@ -415,9 +416,111 @@
                 </div>
             </div>
         </div>
+        <div class="flex flex-col gap-6 md:gap-10 xl:gap-[75px] items-center">
+            <div class="flex items-center gap-4 md:gap-6 xl:gap-10">
+                <div class="flex items-center">
+                    <span class="bg-[#C49362] rounded-full w-1.5 h-1.5"></span>
+                    <span class="bg-[#C49362] w-[75px] h-px"></span>
+                    <span class="bg-[#C49362] rounded-full w-1.5 h-1.5"></span>
+                </div>
+                <p class="uppercase leading-[129.5%] Novelist text-3xl md:text-4xl xl:text-5xl font-normal">Отзывы</p>
+                <div class="flex items-center">
+                    <span class="bg-[#C49362] rounded-full w-1.5 h-1.5"></span>
+                    <span class="bg-[#C49362] w-[75px] h-px"></span>
+                    <span class="bg-[#C49362] rounded-full w-1.5 h-1.5"></span>
+                </div>
+            </div>
+            <div class="w-full relative">
+                <button class="reviewsPrev absolute top-1/2 -translate-y-1/2 w-4 xl:w-5 -left-3 xl:-left-9">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-full" viewBox="0 0 26 49" fill="none">
+                        <path d="M25 48L1.5 24.5L25 1" stroke="#C49362" stroke-dasharray="5 5"/>
+                    </svg>
+                </button>
+                <div class="swiper reviwsSlider grow max-xl:!px-4">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide !flex flex-col items-center text-center relative py-40 gap-3.5 px-12 md:px-16 xl:px-20">
+                            <p class="Novelist uppercase leading-[129.5%] text-xl md:text-2xl xl:text-[32px]">Иванов иван</p>
+                            <p class="leading-[147.52%] font-normal">Считывание информации пространственно-временных континуумов. Наработка и расширение канала. Работа с полем.</p>
+                            <a href="" class="flex items-center gap-4 w-fit">
+                                <p class="leading-[147.52%] font-extralight">Ссылка на отзыв</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="68" height="8" viewBox="0 0 68 8" fill="none">
+                                    <path d="M67.3536 4.35355C67.5488 4.15829 67.5488 3.84171 67.3536 3.64645L64.1716 0.464466C63.9763 0.269204 63.6597 0.269204 63.4645 0.464466C63.2692 0.659728 63.2692 0.976311 63.4645 1.17157L66.2929 4L63.4645 6.82843C63.2692 7.02369 63.2692 7.34027 63.4645 7.53553C63.6597 7.7308 63.9763 7.7308 64.1716 7.53553L67.3536 4.35355ZM0 4.5H67V3.5H0V4.5Z" fill="#A68E6F"/>
+                                </svg>
+                            </a>
+                            <img src="assets/images/reviews/border.png" alt="" class="absolute w-full h-full -z-[1] top-0 left-0 object-fill">
+                        </div>
+                        <div class="swiper-slide !flex flex-col items-center text-center relative py-40 gap-3.5 px-12 md:px-16 xl:px-20">
+                            <p class="Novelist uppercase leading-[129.5%] text-xl md:text-2xl xl:text-[32px]">Иванов иван</p>
+                            <p class="leading-[147.52%] font-normal">Считывание информации пространственно-временных континуумов. Наработка и расширение канала. Работа с полем.</p>
+                            <a href="" class="flex items-center gap-4 w-fit">
+                                <p class="leading-[147.52%] font-extralight">Ссылка на отзыв</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="68" height="8" viewBox="0 0 68 8" fill="none">
+                                    <path d="M67.3536 4.35355C67.5488 4.15829 67.5488 3.84171 67.3536 3.64645L64.1716 0.464466C63.9763 0.269204 63.6597 0.269204 63.4645 0.464466C63.2692 0.659728 63.2692 0.976311 63.4645 1.17157L66.2929 4L63.4645 6.82843C63.2692 7.02369 63.2692 7.34027 63.4645 7.53553C63.6597 7.7308 63.9763 7.7308 64.1716 7.53553L67.3536 4.35355ZM0 4.5H67V3.5H0V4.5Z" fill="#A68E6F"/>
+                                </svg>
+                            </a>
+                            <img src="assets/images/reviews/border.png" alt="" class="absolute w-full h-full -z-[1] top-0 left-0 object-fill">
+                        </div>
+                        <div class="swiper-slide !flex flex-col items-center text-center relative py-40 gap-3.5 px-12 md:px-16 xl:px-20">
+                            <p class="Novelist uppercase leading-[129.5%] text-xl md:text-2xl xl:text-[32px]">Иванов иван</p>
+                            <p class="leading-[147.52%] font-normal">Считывание информации пространственно-временных континуумов. Наработка и расширение канала. Работа с полем.</p>
+                            <a href="" class="flex items-center gap-4 w-fit">
+                                <p class="leading-[147.52%] font-extralight">Ссылка на отзыв</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="68" height="8" viewBox="0 0 68 8" fill="none">
+                                    <path d="M67.3536 4.35355C67.5488 4.15829 67.5488 3.84171 67.3536 3.64645L64.1716 0.464466C63.9763 0.269204 63.6597 0.269204 63.4645 0.464466C63.2692 0.659728 63.2692 0.976311 63.4645 1.17157L66.2929 4L63.4645 6.82843C63.2692 7.02369 63.2692 7.34027 63.4645 7.53553C63.6597 7.7308 63.9763 7.7308 64.1716 7.53553L67.3536 4.35355ZM0 4.5H67V3.5H0V4.5Z" fill="#A68E6F"/>
+                                </svg>
+                            </a>
+                            <img src="assets/images/reviews/border.png" alt="" class="absolute w-full h-full -z-[1] top-0 left-0 object-fill">
+                        </div>
+                        <div class="swiper-slide !flex flex-col items-center text-center relative py-40 gap-3.5 px-12 md:px-16 xl:px-20">
+                            <p class="Novelist uppercase leading-[129.5%] text-xl md:text-2xl xl:text-[32px]">Иванов иван</p>
+                            <p class="leading-[147.52%] font-normal">Считывание информации пространственно-временных континуумов. Наработка и расширение канала. Работа с полем.</p>
+                            <a href="" class="flex items-center gap-4 w-fit">
+                                <p class="leading-[147.52%] font-extralight">Ссылка на отзыв</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="68" height="8" viewBox="0 0 68 8" fill="none">
+                                    <path d="M67.3536 4.35355C67.5488 4.15829 67.5488 3.84171 67.3536 3.64645L64.1716 0.464466C63.9763 0.269204 63.6597 0.269204 63.4645 0.464466C63.2692 0.659728 63.2692 0.976311 63.4645 1.17157L66.2929 4L63.4645 6.82843C63.2692 7.02369 63.2692 7.34027 63.4645 7.53553C63.6597 7.7308 63.9763 7.7308 64.1716 7.53553L67.3536 4.35355ZM0 4.5H67V3.5H0V4.5Z" fill="#A68E6F"/>
+                                </svg>
+                            </a>
+                            <img src="assets/images/reviews/border.png" alt="" class="absolute w-full h-full -z-[1] top-0 left-0 object-fill">
+                        </div>
+                        <div class="swiper-slide !flex flex-col items-center text-center relative py-40 gap-3.5 px-12 md:px-16 xl:px-20">
+                            <p class="Novelist uppercase leading-[129.5%] text-xl md:text-2xl xl:text-[32px]">Иванов иван</p>
+                            <p class="leading-[147.52%] font-normal">Считывание информации пространственно-временных континуумов. Наработка и расширение канала. Работа с полем.</p>
+                            <a href="" class="flex items-center gap-4 w-fit">
+                                <p class="leading-[147.52%] font-extralight">Ссылка на отзыв</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="68" height="8" viewBox="0 0 68 8" fill="none">
+                                    <path d="M67.3536 4.35355C67.5488 4.15829 67.5488 3.84171 67.3536 3.64645L64.1716 0.464466C63.9763 0.269204 63.6597 0.269204 63.4645 0.464466C63.2692 0.659728 63.2692 0.976311 63.4645 1.17157L66.2929 4L63.4645 6.82843C63.2692 7.02369 63.2692 7.34027 63.4645 7.53553C63.6597 7.7308 63.9763 7.7308 64.1716 7.53553L67.3536 4.35355ZM0 4.5H67V3.5H0V4.5Z" fill="#A68E6F"/>
+                                </svg>
+                            </a>
+                            <img src="assets/images/reviews/border.png" alt="" class="absolute w-full h-full -z-[1] top-0 left-0 object-fill">
+                        </div>
+                        <div class="swiper-slide !flex flex-col items-center text-center relative py-40 gap-3.5 px-12 md:px-16 xl:px-20">
+                            <p class="Novelist uppercase leading-[129.5%] text-xl md:text-2xl xl:text-[32px]">Иванов иван</p>
+                            <p class="leading-[147.52%] font-normal">Считывание информации пространственно-временных континуумов. Наработка и расширение канала. Работа с полем.</p>
+                            <a href="" class="flex items-center gap-4 w-fit">
+                                <p class="leading-[147.52%] font-extralight">Ссылка на отзыв</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="68" height="8" viewBox="0 0 68 8" fill="none">
+                                    <path d="M67.3536 4.35355C67.5488 4.15829 67.5488 3.84171 67.3536 3.64645L64.1716 0.464466C63.9763 0.269204 63.6597 0.269204 63.4645 0.464466C63.2692 0.659728 63.2692 0.976311 63.4645 1.17157L66.2929 4L63.4645 6.82843C63.2692 7.02369 63.2692 7.34027 63.4645 7.53553C63.6597 7.7308 63.9763 7.7308 64.1716 7.53553L67.3536 4.35355ZM0 4.5H67V3.5H0V4.5Z" fill="#A68E6F"/>
+                                </svg>
+                            </a>
+                            <img src="assets/images/reviews/border.png" alt="" class="absolute w-full h-full -z-[1] top-0 left-0 object-fill">
+                        </div>
+                    </div>
+                </div>
+                <button class="reviewsNext absolute top-1/2 -translate-y-1/2 w-4 xl:w-5 -right-3 xl:-right-9">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-full" viewBox="0 0 25 49" fill="none">
+                        <path d="M0.5 1L24 24.5L0.5 48" stroke="#C49362" stroke-dasharray="5 5"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
     </main>
 
+    <header>
+        
+    </header>
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
