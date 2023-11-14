@@ -67,3 +67,6 @@ body {
 .swiper-button-lock {
     @apply !block
 }
+.footerBg {
+    background: linear-gradient(180deg, rgba(5, 14, 25, 0.00) 0%, #050E19 100%);
+}
