@@ -11,6 +11,7 @@ $("#toggler").click(()=>{
     $("#overlay").toggleClass("hidden")
 })
 
+
 /* slider */
 const swiper = new Swiper('.reviwsSlider', {
   spaceBetween: 20,
@@ -32,6 +33,7 @@ const swiper = new Swiper('.reviwsSlider', {
   },
 });
 
+
 /* dropdowns */
 $(".dropdown").each((i,el) => {
   $(el).find(".dropdownToggler").click(() => {
@@ -39,3 +41,10 @@ $(".dropdown").each((i,el) => {
     $(el).find(".dropdownToggler").find("img").toggleClass("rotate-180")
   })
 })
+
+
+/* scroll to top */
+$('#scroll_top').click(function(){
+  $('html, body').animate({scrollTop: 0}, 500)
+  return false
+});
