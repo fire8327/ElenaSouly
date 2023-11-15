@@ -48,3 +48,15 @@ $('#scroll_top').click(function(){
   $('html, body').animate({scrollTop: 0}, 500)
   return false
 });
+
+
+/* scroll to links */
+$("a[href^='#']").on("click", function () {
+  let href = $(this).attr("href");
+
+  $("html, body").animate({
+      scrollTop: $(href).offset().top - 50
+  });
+
+  return false;
+});
