@@ -13,21 +13,29 @@ $("#toggler").click(()=>{
 
 /* slider */
 const swiper = new Swiper('.reviwsSlider', {
-    spaceBetween: 20,
-    breakpoints: {
-        320: {
-          slidesPerView: 1
-        },
-        768: {
-          slidesPerView: 2
-        },
-        1024: {
-          slidesPerView: 3
-        }
-    },
-    loop: true,  
-    navigation: {
-      nextEl: '.reviewsNext',
-      prevEl: '.reviewsPrev',
-    },
-  });
+  spaceBetween: 20,
+  breakpoints: {
+      320: {
+        slidesPerView: 1
+      },
+      768: {
+        slidesPerView: 2
+      },
+      1024: {
+        slidesPerView: 3
+      }
+  },
+  loop: true,  
+  navigation: {
+    nextEl: '.reviewsNext',
+    prevEl: '.reviewsPrev',
+  },
+});
+
+/* dropdowns */
+$(".dropdown").each((i,el) => {
+  $(el).find(".dropdownToggler").click(() => {
+    $(el).find(".dropdownList").toggle(500)
+    $(el).find(".dropdownToggler").find("img").toggleClass("rotate-180")
+  })
+})
