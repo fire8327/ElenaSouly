@@ -765,6 +765,14 @@ video {
   right: 300px;
 }
 
+.right-\[250px\]{
+  right: 250px;
+}
+
+.right-\[200px\]{
+  right: 200px;
+}
+
 .isolate{
   isolation: isolate;
 }
@@ -1041,6 +1049,10 @@ video {
 
 .w-4{
   width: 1rem;
+}
+
+.w-6{
+  width: 1.5rem;
 }
 
 .max-w-\[400px\]{
@@ -3270,6 +3282,22 @@ body {
 
   .xl\:-right-10{
     right: -2.5rem;
+  }
+
+  .xl\:right-\[3\]{
+    right: 3;
+  }
+
+  .xl\:right-\[350\]{
+    right: 350;
+  }
+
+  .xl\:right-\[350px\]{
+    right: 350px;
+  }
+
+  .xl\:right-\[300px\]{
+    right: 300px;
   }
 
   .xl\:mt-9{
