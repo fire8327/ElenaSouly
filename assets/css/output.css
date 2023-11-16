@@ -2285,6 +2285,11 @@ video {
   padding-bottom: 10rem;
 }
 
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .py-6{
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -2298,11 +2303,6 @@ video {
 .px-8{
   padding-left: 2rem;
   padding-right: 2rem;
-}
-
-.px-4{
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 .px-16{
@@ -2990,6 +2990,22 @@ body {
   background: linear-gradient(180deg, rgba(5, 14, 25, 0.00) 0%, #050E19 100%);
 }
 
+.clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  line-clamp: 6;
+  -webkit-box-orient: vertical;
+}
+
+@media (max-width: 768px) {
+  .clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+}
+
 .hover\:font-bold:hover{
   font-weight: 700;
 }
@@ -3241,11 +3257,6 @@ body {
     padding-bottom: 1.5rem;
   }
 
-  .md\:px-16{
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-
   .md\:py-8{
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -3471,11 +3482,6 @@ body {
   .xl\:py-8{
     padding-top: 2rem;
     padding-bottom: 2rem;
-  }
-
-  .xl\:px-20{
-    padding-left: 5rem;
-    padding-right: 5rem;
   }
 
   .xl\:py-12{

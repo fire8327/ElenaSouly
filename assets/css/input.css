@@ -70,3 +70,17 @@ body {
 .footerBg {
     background: linear-gradient(180deg, rgba(5, 14, 25, 0.00) 0%, #050E19 100%);
 }
+.clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+            line-clamp: 6; 
+    -webkit-box-orient: vertical;
+}
+@media (max-width: 768px) {
+    .clamp {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+                line-clamp: 4; 
+        -webkit-box-orient: vertical;
+    }
+}
