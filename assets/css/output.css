@@ -432,15 +432,6 @@ video {
 
 /* Применение системы гридов для расположения контента в ячейку main или full или в любую другую ячейку между именованными линиями grid*/
 
-.grid-container{
-  grid-template-columns: [full-start] minmax(var(--widthContentMargin), 1fr) [main-start] minmax(0, var(--widthContent)) [main-end] minmax(var(--widthContentMargin), 1fr) [full-end];
-  display: grid
-}
-
-.grid-container>*{
-  grid-column: main;
-}
-
 .wrapper{
   margin-left: auto;
   margin-right: auto;
@@ -741,12 +732,12 @@ video {
   top: 2.5rem;
 }
 
-.left-4{
-  left: 1rem;
-}
-
 .right-4{
   right: 1rem;
+}
+
+.left-4{
+  left: 1rem;
 }
 
 .right-10{
@@ -843,11 +834,6 @@ video {
 
 .m-10{
   margin: 2.5rem;
-}
-
-.mx-auto{
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .my-10{
@@ -1618,6 +1604,10 @@ video {
   gap: 2.25rem;
 }
 
+.gap-12{
+  gap: 3rem;
+}
+
 .gap-6{
   gap: 1.5rem;
 }
@@ -1668,14 +1658,6 @@ video {
 
 .gap-16{
   gap: 4rem;
-}
-
-.gap-12{
-  gap: 3rem;
-}
-
-.gap-y-12{
-  row-gap: 3rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]){
@@ -2351,13 +2333,20 @@ video {
   padding-right: 1.25rem;
 }
 
-.px-\[15px\]{
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
 .pt-5{
   padding-top: 1.25rem;
+}
+
+.pr-6{
+  padding-right: 1.5rem;
+}
+
+.pr-5{
+  padding-right: 1.25rem;
+}
+
+.pr-4{
+  padding-right: 1rem;
 }
 
 .text-left{
@@ -3238,11 +3227,6 @@ body {
     max-width: var(--widthContent);
   }
 
-  .sm\:px-5{
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-
   .sm\:underline{
     text-decoration-line: underline;
   }
@@ -3277,6 +3261,10 @@ body {
     align-items: center;
   }
 
+  .md\:gap-16{
+    gap: 4rem;
+  }
+
   .md\:gap-8{
     gap: 2rem;
   }
@@ -3293,16 +3281,8 @@ body {
     gap: 3rem;
   }
 
-  .md\:gap-16{
-    gap: 4rem;
-  }
-
   .md\:gap-20{
     gap: 5rem;
-  }
-
-  .md\:gap-y-16{
-    row-gap: 4rem;
   }
 
   .md\:py-6{
@@ -3447,10 +3427,6 @@ body {
     top: 50%;
   }
 
-  .xl\:-right-10{
-    right: -2.5rem;
-  }
-
   .xl\:right-\[300px\]{
     right: 300px;
   }
@@ -3482,6 +3458,10 @@ body {
 
   .xl\:grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .xl\:gap-\[105px\]{
+    gap: 105px;
   }
 
   .xl\:gap-8{
@@ -3530,14 +3510,6 @@ body {
 
   .xl\:gap-12{
     gap: 3rem;
-  }
-
-  .xl\:gap-\[105px\]{
-    gap: 105px;
-  }
-
-  .xl\:gap-y-\[105px\]{
-    row-gap: 105px;
   }
 
   .xl\:py-8{
