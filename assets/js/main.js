@@ -60,3 +60,39 @@ $("a[href^='#']").on("click", function () {
 
   return false;
 });
+
+
+/* form submit */
+const token = "6482911685:AAEsdRXbyi4QPmVIdIH3-cjgAY01znB4ogU"
+const chat_id = "-4062685656"
+const url = `https://api.telegram.org/bot${token}/sendMessage`
+
+document.getElementById("form").addEventListener("submit", function (e) {
+    e.preventDefault();
+        
+    let message = `<b>Заявка на курс.</b>\n`;
+    message += `<b>Имя: </b> ${this.userName.value}\n`;
+    message += `<b>Email: </b> ${this.userEmail.value}\n`;
+    message += `<b>Номер телефона: </b> ${this.userPhone.value}`;
+
+    axios.post(url, {
+        chat_id: chat_id,
+        parse_mode: 'html',
+        text: message
+    })
+    .then((res) => {
+        this.userName.value = ""
+        this.userEmail.value = ""
+        this.userPhone.value = ""
+        $("#success").show(500)
+        setTimeout(() => {
+            $("#success").hide(500)
+        }, 3000);
+    })
+    .catch((err) => {
+        console.warn(err);
+    })
+    .finally(() => {
+        console.log('Конец');
+    })  
+})

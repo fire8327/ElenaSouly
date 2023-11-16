@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регрессия с мастером Еленой Апинян</title>
+    <link rel="stylesheet" href="../assets/css/output.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body class="flex flex-col min-h-screen bg-[#09182C] text-white">
+    <header class="py-5 md:py-6 xl:py-8 w-full border-b-[0.5px] border-[#F8B6D480] grid-container relative">
+        <div class="flex items-center justify-between gap-20">
+            <a href="../index.html" class="text-[20px] md:text-[24px] xl:text-[28px] Novelist">Академия альтернативного образования "ЭВОЛЮЦИЯ"</a>
+            <nav class="flex lg:items-center gap-9 text-xl leading-[161.52%] font-extralight max-lg:absolute max-lg:w-full max-lg:top-0 max-lg:left-0 max-lg:flex-col max-lg:rounded-b-lg max-lg:bg-[#09182C] max-lg:-translate-y-full max-lg:transition-all max-lg:duration-500 max-lg:z-40 max-lg:p-5" id="menu">
+                <a href="../index.html">Главная</a>
+                <a href="courses.html">Курсы</a>
+                <a href="teachers.html">Специалисты</a>
+                <a href="modules.html">Модули</a>
+            </nav>
+            <button class="lg:hidden flex flex-col z-30 justify-between w-[26px] transition-all ease-linear h-3.5 shrink-0" id="toggler">
+                <span class="w-full h-0.5 bg-white rounded-[1px] origin-[0] transition-transform ease-linear duration-200"></span>
+                <span class="w-full h-0.5 bg-white rounded-[1px] transition-opacity ease-linear duration-200"></span>
+                <span class="w-full h-0.5 bg-white rounded-[1px] origin-[0] transition-transform ease-linear duration-200"></span>
+            </button>
+        </div>
+        <img src="../assets/images/header/bg.svg" alt="" class="absolute w-full h-full inset-0 col-span-full object-cover -z-[1]">
+        <div class="absolute w-full h-screen top-full bg-black/50 col-span-full z-30 hidden lg:hidden" id="overlay"></div>
+    </header>
+
+    <main class="grid-container gap-y-12 md:gap-y-16 xl:gap-y-[105px] my-10 grow relative">
+        <form id="form" class="flex flex-col gap-6 items-center h-full justify-center">
+            <p class="uppercase leading-[129.5%] Novelist text-3xl md:text-4xl xl:text-5xl font-normal">Записаться на курс</p>
+            <div class="flex flex-col gap-4 w-full md:w-2/3 xl:w-1/2 items-center">
+                <input name="userName" id="userName" type="text" placeholder="Имя" class="text-lg w-full px-4 py-2 border border-[#C49362] rounded-full bg-transparent focus:outline-none focus:ring-0 focus:appearance-none">
+                <input name="userEmail" id="userEmail" type="email" placeholder="Email" class="text-lg w-full px-4 py-2 border border-[#C49362] rounded-full bg-transparent focus:outline-none focus:ring-0 focus:appearance-none">
+                <input name="userPhone" id="userPhone" type="text" placeholder="Телефон" class="text-lg w-full px-4 py-2 border border-[#C49362] rounded-full bg-transparent focus:outline-none focus:ring-0 focus:appearance-none">
+                <div class="flex items-center gap-4">
+                    <input type="checkbox" id="userAgree">
+                    <label for="userAgree">Я согласен на обработку моих персональных данных в соответствии с <a href="" target="_blank" class="underline underline-offset-2">Условиями</a></label>
+                </div>
+                <button class="px-4 py-2 text-lg text-white bg-[#C49362] w-fit rounded-full">Отправить заявку</button>
+            </div>
+        </form>
+        <p id="success" class="fixed max-lg:top-20 max-lg:right-6 right-10 px-4 py-2 border border-[#C49362] rounded-full bg-[#09182C] z-10 shadow-[0px_0px_13px_-4px_white]">Заявка успешно отправлена!</p>
+    </main>
+
+    <footer class="w-full grid-container py-6 md:py-8 xl:py-12 border-t-[0.5px] border-[#A68E6F] footerBg relative mt-auto">
+        <img src="../assets/images/footer/bg.svg" alt="" class="absolute top-0 left-0 w-full h-full object-cover col-span-full -z-[1]">
+        <button class="absolute z-[2] top-10 xl:top-1/2 xl:-translate-y-1/2 right-0 xl:-right-10" id="scroll_top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="48" viewBox="0 0 16 48" fill="none">
+                <path d="M7 47C7 47.5523 7.44772 48 8 48C8.55228 48 9 47.5523 9 47L7 47ZM8.70711 0.292892C8.31658 -0.0976295 7.68342 -0.0976296 7.2929 0.292892L0.928934 6.65685C0.53841 7.04738 0.53841 7.68054 0.928934 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41422L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292892ZM9 47L9 1L7 1L7 47L9 47Z" fill="#A68E6F"/>
+            </svg>
+        </button>
+        <div class="flex lg:items-center lg:justify-between max-lg:flex-col gap-7 md:gap-12 xl:gap-24">
+            <div class="flex flex-col gap-2.5 xl:gap-1.5">
+                <a href="../index.html" class="leading-[148%] text-xl md:text-2xl xl:text-[28px] Novelist">Академия альтернативного <br> образования "ЭВОЛЮЦИЯ"</a>
+                <a href="" class="leading-[161.52%] font-extralight underline">ИП Устюгова М.Л. ИНН 781695772870</a>
+            </div>
+            <div class="flex lg:items-start gap-7 xl:gap-10 leading-[161.52%] font-extralight md:text-lg xl:text-xl max-lg:justify-between max-md:flex-col max-lg:w-full">
+                <div class="flex items-center gap-7 xl:gap-8 max-lg:justify-between max-md:w-full">
+                    <div class="flex flex-col gap-4 xl:gap-[18px]">
+                        <a href="../index.html">Главная</a>
+                        <a href="courses.html">Курсы</a>
+                    </div>
+                    <div class="flex flex-col gap-4 xl:gap-[18px]">
+                        <a href="teachers.html">Специалисты</a>
+                        <a href="modules.html">Модули</a>
+                    </div>
+                </div>
+                <div class="flex lg:items-start gap-7 xl:gap-10 max-lg:justify-between max-md:w-full">
+                    <div class="flex flex-col gap-4 xl:gap-1.5">
+                        <a href="tel:+7-981-125-88-4283">+7-981-125-88-4283</a>
+                        <a href="mailto:maxa@gmail.com">maxa@gmail.com</a>
+                    </div>
+                    <a href="https://t.me/filippovtarget" target="_blank" class="flex flex-col gap-2.5 xl:gap-5 items-center text-center">
+                        <span>Разработка сайта</span>
+                        <span class="uppercase border border-white rounded-[9px] w-full py-1 px-8">FILIPPOV</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
