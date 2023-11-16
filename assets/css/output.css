@@ -1670,6 +1670,10 @@ video {
   gap: 4rem;
 }
 
+.gap-12{
+  gap: 3rem;
+}
+
 .gap-y-12{
   row-gap: 3rem;
 }
@@ -3526,6 +3530,10 @@ body {
 
   .xl\:gap-12{
     gap: 3rem;
+  }
+
+  .xl\:gap-\[105px\]{
+    gap: 105px;
   }
 
   .xl\:gap-y-\[105px\]{
