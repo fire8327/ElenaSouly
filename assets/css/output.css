@@ -2341,14 +2341,6 @@ video {
   padding-right: 1.5rem;
 }
 
-.pr-5{
-  padding-right: 1.25rem;
-}
-
-.pr-4{
-  padding-right: 1rem;
-}
-
 .text-left{
   text-align: left;
 }
@@ -2578,6 +2570,18 @@ video {
 
 .leading-\[177\.5\%\]{
   line-height: 177.5%;
+}
+
+.tracking-wide{
+  letter-spacing: 0.025em;
+}
+
+.tracking-wider{
+  letter-spacing: 0.05em;
+}
+
+.tracking-widest{
+  letter-spacing: 0.1em;
 }
 
 .text-white{
