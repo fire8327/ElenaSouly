@@ -31,13 +31,25 @@
     <main class="flex flex-col gap-12 md:gap-16 xl:gap-[105px] my-10 grow relative wrapper">
         <form id="form" class="flex flex-col gap-6 items-center grow justify-center">
             <p class="uppercase leading-[129.5%] Novelist text-3xl md:text-4xl xl:text-5xl font-normal">Записаться на курс</p>
-            <div class="flex flex-col gap-4 w-full md:w-2/3 xl:w-1/2 items-center">
-                <input name="userName" id="userName" type="text" placeholder="Имя" class="text-lg w-full px-4 py-2 border border-[#C49362] rounded-full bg-transparent focus:outline-none focus:ring-0 focus:appearance-none">
-                <input name="userEmail" id="userEmail" type="email" placeholder="Email" class="text-lg w-full px-4 py-2 border border-[#C49362] rounded-full bg-transparent focus:outline-none focus:ring-0 focus:appearance-none">
-                <input name="userPhone" id="userPhone" type="text" placeholder="Телефон" class="text-lg w-full px-4 py-2 border border-[#C49362] rounded-full bg-transparent focus:outline-none focus:ring-0 focus:appearance-none">
-                <div class="flex items-center gap-4">
-                    <input type="checkbox" id="userAgree">
-                    <label for="userAgree">Я согласен на обработку моих персональных данных в соответствии с <a href="" target="_blank" class="underline underline-offset-2">Условиями</a></label>
+            <div class="flex flex-col gap-3 w-full md:w-2/3 xl:w-1/2 items-center">
+                <div class="flex flex-col gap-2 w-full">
+                    <input name="userName" id="userName" type="text" placeholder="Имя" class="text-lg w-full px-4 py-2 border border-[#C49362] rounded-full bg-transparent focus:outline-none focus:ring-0 focus:appearance-none">
+                    <p id="userNameError"></p>
+                </div>
+                <div class="flex flex-col gap-2 w-full">
+                    <input name="userEmail" id="userEmail" type="email" placeholder="Email" class="text-lg w-full px-4 py-2 border border-[#C49362] rounded-full bg-transparent focus:outline-none focus:ring-0 focus:appearance-none">
+                    <p id="userEmailError"></p>
+                </div>
+                <div class="flex flex-col gap-2 w-full">
+                    <input name="userPhone" id="userPhone" type="text" placeholder="Телефон" class="text-lg w-full px-4 py-2 border border-[#C49362] rounded-full bg-transparent focus:outline-none focus:ring-0 focus:appearance-none">
+                    <p id="userPhoneError"></p>
+                </div>
+                <div class="flex flex-col gap-2 w-full">
+                    <div class="flex items-center gap-4">
+                        <input type="checkbox" id="userAgree">
+                        <label for="userAgree">Я согласен на обработку моих персональных данных в соответствии с <a href="" target="_blank" class="underline underline-offset-2">Условиями</a></label>
+                    </div>
+                    <p id="userAgreeError"></p>
                 </div>
                 <button class="px-4 py-2 text-lg text-white bg-[#C49362] w-fit rounded-full">Отправить заявку</button>
             </div>
@@ -84,6 +96,7 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="../assets/js/main.js"></script>
 </body>

@@ -62,6 +62,77 @@ $("a[href^='#']").on("click", function () {
 });
 
 
+/* validate */
+const validate = new JustValidate('#form', {
+  validateBeforeSubmitting: true,
+});
+validate
+.addField('#userName', 
+[
+  {
+    rule: 'required',
+    errorMessage: 'Поле Имя обязательно к заполнению',
+  },
+  {
+    rule: 'customRegexp',
+    value: /^[А-Я]+$/i,      
+    errorMessage: 'Поле Имя должно содержать только кириллицу',
+  },    
+  {
+    rule: 'minLength',
+    value: 2,      
+    errorMessage: 'Поле Имя должно иметь минимум 2 символа',
+  },    
+],
+{
+  errorsContainer: '#userNameError'
+})
+.addField('#userEmail', [
+  {
+    rule: 'required',
+    errorMessage: 'Поле Email обязательно к заполнению',
+  },
+  {
+    rule: 'email',  
+    errorMessage: 'Поле Email должно соответствовать почте',
+  }   
+],
+{
+  errorsContainer: '#userEmailError'
+})
+.addField(
+'#userAgree', 
+  [
+    {
+      rule: 'required',
+      errorMessage: 'Необходимо согласиться с условиями обработки персональных данных',
+    }  
+  ],
+  {
+    errorsContainer: '#userAgreeError'
+  }
+)
+.addField('#userPhone', [
+  {
+    rule: 'required',
+    errorMessage: 'Поле Телефон обязательно к заполнению',
+  },    
+  {
+      rule: 'customRegexp',
+      value: /[0-9]/,      
+      errorMessage: 'Поле Телефон должно содержать только цифры',
+  },
+  {
+    rule: 'minLength',
+    value: 11,      
+    errorMessage: 'Поле Телефон должно иметь минимум 11 символов',
+  }
+],
+{
+  errorsContainer: '#userPhoneError'
+});
+
+
 /* form submit */
 const token = "6482911685:AAEsdRXbyi4QPmVIdIH3-cjgAY01znB4ogU"
 const chat_id = "-4062685656"
@@ -70,29 +141,31 @@ const url = `https://api.telegram.org/bot${token}/sendMessage`
 document.getElementById("form").addEventListener("submit", function (e) {
     e.preventDefault();
         
-    let message = `<b>Заявка на курс.</b>\n`;
-    message += `<b>Имя: </b> ${this.userName.value}\n`;
-    message += `<b>Email: </b> ${this.userEmail.value}\n`;
-    message += `<b>Номер телефона: </b> ${this.userPhone.value}`;
+    if(validate.isValid) {
+      let message = `<b>Заявка на курс.</b>\n`;
+      message += `<b>Имя: </b> ${this.userName.value}\n`;
+      message += `<b>Email: </b> ${this.userEmail.value}\n`;
+      message += `<b>Номер телефона: </b> ${this.userPhone.value}`;
 
-    axios.post(url, {
-        chat_id: chat_id,
-        parse_mode: 'html',
-        text: message
-    })
-    .then((res) => {
-        this.userName.value = ""
-        this.userEmail.value = ""
-        this.userPhone.value = ""
-        $("#success").show(500)
-        setTimeout(() => {
-            $("#success").hide(500)
-        }, 3000);
-    })
-    .catch((err) => {
-        console.warn(err);
-    })
-    .finally(() => {
-        console.log('Конец');
-    })  
+      axios.post(url, {
+          chat_id: chat_id,
+          parse_mode: 'html',
+          text: message
+      })
+      .then((res) => {
+          this.userName.value = ""
+          this.userEmail.value = ""
+          this.userPhone.value = ""
+          $("#success").show(500)
+          setTimeout(() => {
+              $("#success").hide(500)
+          }, 3000);
+      })
+      .catch((err) => {
+          console.warn(err);
+      })
+      .finally(() => {
+          console.log('Конец');
+      })  
+    }
 })
